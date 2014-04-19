@@ -1,4 +1,7 @@
 Prosedy::Application.routes.draw do
+
+  resources :articles
+
   get "welcome/index"
   devise_for :authors
   # The priority is based upon order of creation: first created -> highest priority.
