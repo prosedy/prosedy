@@ -201,7 +201,7 @@ module PParser
       h = self.html(html)
       sentences = Tokenizer::tokenizer.tokenize_text(h)
       sentences.each_with_index do |sentence, i|
-        h.wrap_out("<div class='sentence' id='#{i+1}'>", sentence)
+        h.wrap_out("<span class='sentence' id='#{i+1}'>", sentence)
       end
       h.apply
     end
