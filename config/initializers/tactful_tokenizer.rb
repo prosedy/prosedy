@@ -3,4 +3,5 @@ module Tokenizer
     def tokenizer
       @tokenizer ||= TactfulTokenizer::Model.new
     end
+  end
 end
