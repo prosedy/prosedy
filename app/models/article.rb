@@ -6,6 +6,6 @@ class Article < ActiveRecord::Base
   before_save :tokenize_html
 
   def tokenize_html
-    self[:text] = PParser::tokenize_html(self[:text])
+    self[:tokenized] = PParser::tokenize_html(self[:text])
   end
 end
