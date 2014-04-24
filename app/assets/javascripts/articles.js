@@ -252,7 +252,13 @@ var editor = (function() {
   }
 
   function saveState( event ) {
-    
+    $.ajax({url: "/articles/" + window.articleId, 
+      data: { article: { title: headerField.innerHTML, text: contentField.innerHTML } },
+      dataType: "json",
+      type: "PUT",
+      success: function(data) { alert(data); return false },
+      failure: function(data) { return false }
+    });
     localStorage[ 'header' ] = headerField.innerHTML;
     localStorage[ 'content' ] = contentField.innerHTML;
   }
