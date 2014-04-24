@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
   def new
-    @article = Article.new
+    @article = Article.new({title: "New Prose", text: "Once upon a time..."})
+    @article.save
+    render 'edit'
   end
 
   def show

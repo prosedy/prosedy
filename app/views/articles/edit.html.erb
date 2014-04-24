@@ -3,3 +3,7 @@
 <%= render 'zenpen' %>
 
 <%= link_to 'Back', articles_path %>
+
+<%= javascript_tag do %>
+  window.articleId = <%= @article.id %>;
+<% end %>
